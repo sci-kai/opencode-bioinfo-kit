@@ -112,15 +112,3 @@ CUBI conventions (`cubi-rules-condensed.md`) take precedence over this baseline 
 * Every commit needs a real message: imperative summary ≤50 chars, optional body wrapped at 72.
 * Never change shared commit history: no `--amend`, `reset`, force operations, or rebase of `main`/`dev`/`TEMPLATE` or of commits that are already merged, unless the user explicitly asks. Rebasing your own unmerged feature branch onto its base before a fast-forward merge is the normal integration step.
 * The AI never runs `git push`, on any remote — that step is always manual.
-
-## Session command log
-
-Record every CLI command run during the session in `opencode_command.log` (keep it out of
-commits), one entry per command:
-
-```
-[YYYY-MM-DDTHH:MM:SS] command
------
-```
-
-Never log personal information, secrets, or API tokens.
