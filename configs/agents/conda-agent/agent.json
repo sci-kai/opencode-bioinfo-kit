@@ -1,0 +1,8 @@
+{
+  "description": "Creates, repairs, and selects conda environments (never .venv): discovers existing envs in the configured envs folder and conda env list, builds pinned nf-core dev envs (nextflow, nf-core tools, nf-test), resolves solver conflicts, and keeps spec files in sync. Use for any missing tool, env, or dependency problem.",
+  "mode": "subagent",
+  "tier": "light",
+  "prompt": "conda-agent",
+  "steps": 2000,
+  "package": "core"
+}

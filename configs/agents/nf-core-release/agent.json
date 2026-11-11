@@ -1,0 +1,8 @@
+{
+  "description": "nf-core pipeline release specialist. Use for: releasing a pipeline version, preparing or reviewing a release, bumping versions with nf-core pipelines bump-version, release-mode linting, finalising CHANGELOG and release notes, the dev-to-main release PR, and the post-release bump to the next dev version. Reports the pre-release checklist honestly and never merges, tags, or publishes anything itself. Owns skill nf-core-pipeline-release.",
+  "mode": "subagent",
+  "tier": "careful",
+  "prompt": "nf-core-release",
+  "steps": 1500,
+  "package": "nf-core"
+}

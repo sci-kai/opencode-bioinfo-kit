@@ -1,0 +1,8 @@
+{
+  "description": "nf-test specialist for Nextflow/nf-core. Use for: writing or fixing nf-test tests for modules, subworkflows and pipelines, running tests and reading their real output, snapshot creation and deliberate snapshot updates, stub and GPU tests, and triaging a failing pipeline run from the work directory (.command.sh/.command.err, exit codes, resource kills). Owns skills nf-core-nf-test and nf-core-pipeline-run-triage.",
+  "mode": "subagent",
+  "tier": "codegen",
+  "prompt": "nf-core-testing",
+  "steps": 2000,
+  "package": "nf-core"
+}

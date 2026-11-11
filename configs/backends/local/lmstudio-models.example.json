@@ -1,0 +1,64 @@
+{
+  "format": 2,
+  "description": "Example LM Studio model set (one 16 GB GPU host): qwen3.5-9b for quick work, qwen3.8-27b for code and reviews, five more models declared for switching by hand in opencode.",
+  "models": {
+    "qwen/qwen3.5-9b": {
+      "name": "Qwen3.5 9B Q4_K_M (fast)",
+      "context": 131072,
+      "output": 32768,
+      "tools": true,
+      "reasoning": true
+    },
+    "qwen/qwen3.8-27b": {
+      "name": "Qwen3.8 27B Q4_K_M (heavy, slow)",
+      "context": 65536,
+      "output": 16384,
+      "tools": true,
+      "reasoning": true
+    },
+    "google/gemma-4-26b-a4b-qat": {
+      "name": "Gemma 4 26B-A4B QAT (MoE)",
+      "context": 65536,
+      "output": 16384,
+      "tools": true,
+      "reasoning": true,
+      "temperature": 1.0,
+      "top_p": 0.95
+    },
+    "google/gemma-4-12b-qat": {
+      "name": "Gemma 4 12B QAT",
+      "context": 65536,
+      "output": 16384,
+      "tools": true,
+      "reasoning": true
+    },
+    "google/gemma-4-e4b": {
+      "name": "Gemma 4 E4B",
+      "context": 131072,
+      "output": 16384,
+      "tools": true,
+      "reasoning": true
+    },
+    "nvidia/nemotron-3-nano-4b": {
+      "name": "Nemotron 3 Nano 4B",
+      "context": 131072,
+      "output": 16384,
+      "tools": true,
+      "reasoning": true
+    },
+    "prism-ml/bonsai-27b": {
+      "name": "Bonsai 27B Q1_0 (experimental)",
+      "context": 131072,
+      "output": 16384,
+      "tools": true,
+      "reasoning": true
+    }
+  },
+  "tiers": {
+    "light": "qwen/qwen3.5-9b",
+    "main": "qwen/qwen3.5-9b",
+    "writing": "qwen/qwen3.5-9b",
+    "codegen": "qwen/qwen3.8-27b",
+    "careful": "qwen/qwen3.8-27b"
+  }
+}

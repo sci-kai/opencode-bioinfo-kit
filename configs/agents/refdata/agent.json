@@ -1,0 +1,8 @@
+{
+  "description": "Reference-sample specialist for SEQC2 (HCC1395/HCC1395BL) and GIAB (HG001-HG007 germline, HG008 somatic). Use for: choosing a test dataset and tier, preparing/downsampling it with seqc2-toolkit or GIAB downloads, toolkit workflow profiles, benchmarking against truth sets, offline/HPC transfer. Owns skills refdata-*. Uses seqc2-toolkit (external, install separately). Pipeline code goes to nextflow/nf-core-*, test strategy to test-design.",
+  "mode": "subagent",
+  "tier": "careful",
+  "prompt": "refdata",
+  "steps": 2000,
+  "package": "refdata"
+}

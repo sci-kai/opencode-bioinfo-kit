@@ -1,0 +1,8 @@
+{
+  "description": "Writes and revises manuscript Methods/Materials sections for analyses run with nf-core/Nextflow pipelines: tools and versions from the run's versions manifest, non-default parameters, reference builds, and verified citations. Not for pipeline docs (that is nf-core-docs).",
+  "mode": "subagent",
+  "tier": "careful",
+  "prompt": "paper-writing",
+  "steps": 2000,
+  "package": "bioinformatics"
+}

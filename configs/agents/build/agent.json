@@ -1,0 +1,6 @@
+{
+  "tier": "main",
+  "prompt": "build",
+  "steps": 2000,
+  "package": "core"
+}

@@ -1,0 +1,8 @@
+{
+  "description": "Python design and coding specialist. Use for: writing or refactoring Python scripts (bin/ helpers, orchestration scripts) and installable tools/packages (src layout, pyproject, CLI subcommands), error/logging conventions, black/ruff setup, provenance output, and the pytest tests for that code. Owns skills python-bin-script, python-package-cli, python-validation-errors, python-stdlib-orchestration, python-provenance-checks, python-port-from-r. Genomic file-format logic and statistics go to bioinformatics-agent; test strategy to test-design; data-format choice to data-formats.",
+  "mode": "subagent",
+  "tier": "codegen",
+  "prompt": "python-dev",
+  "steps": 2000,
+  "package": "dev"
+}

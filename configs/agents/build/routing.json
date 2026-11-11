@@ -1,0 +1,100 @@
+{
+  "description": "Routing table of the build/general orchestrator. opencode-kit renders it into the build prompt (marker <!-- opencode-kit:routing -->) with only the rows of installed agents; a tie-breaker is shown only if every agent it names in backticks is installed.",
+  "sections": [
+    {
+      "heading": null,
+      "intro": null,
+      "header": [
+        "Task involves...",
+        "Use subagent"
+      ],
+      "rows": [
+        {
+          "task": "Creating/fixing a conda environment, dependency/solver conflicts, package installs",
+          "agent": "conda-agent"
+        },
+        {
+          "task": "Nextflow/nf-core work with **no** more specific owner below — workflow/subworkflow logic, channel plumbing, `nextflow.config`, pipeline architecture, or a general nf-core question",
+          "agent": "nextflow"
+        },
+        {
+          "task": "Linting/validating an nf-core pipeline until it passes cleanly",
+          "agent": "nextflow-lint"
+        },
+        {
+          "task": "Bioinformatics file-format code that must be correct (VCF/BAM/FASTA/GTF parsing, variant calling, omics stats)",
+          "agent": "bioinformatics-agent"
+        },
+        {
+          "task": "Designing or writing a Python script, tool or package (structure, CLI, errors/logging, style, packaging, provenance), its pytest tests, black/ruff, porting R to Python",
+          "agent": "python-dev"
+        },
+        {
+          "task": "How to store data: choosing formats, config/secret layout, sample-sheet schemas, JSON-schema validation, state/backup/atomic writes, checksums/manifests, raw→normalized tables, output docs",
+          "agent": "data-formats"
+        },
+        {
+          "task": "Test strategy and use cases: test tiers, requirement→test mapping, use-case tables, synthetic test datasets, failure-path tests, regression before/after, scenario suites, test reports",
+          "agent": "test-design"
+        },
+        {
+          "task": "SEQC2 or GIAB reference samples: choosing/preparing/downsampling test data (seqc2-toolkit), benchmarking against truth sets, offline transfer of test data",
+          "agent": "refdata"
+        },
+        {
+          "task": "An error, crash, or \"why is this happening\" question **outside** a Nextflow run",
+          "agent": "debug-agent"
+        },
+        {
+          "task": "Manuscript Methods/Materials prose",
+          "agent": "paper-writing"
+        }
+      ]
+    },
+    {
+      "heading": "### nf-core specialists — prefer these over `nextflow` when the request matches",
+      "intro": "Each owns a set of skills that encode the official nf-co.re procedure step by step. Routing to the specialist is strictly better than letting `nextflow` improvise the same procedure.",
+      "header": [
+        "Request mentions...",
+        "Use subagent"
+      ],
+      "rows": [
+        {
+          "task": "Template sync, `TEMPLATE` branch, \"template update for nf-core/tools vX\" PR, pipeline is behind the template, scaffolding a new pipeline, `master`→`main` rename",
+          "agent": "nf-core-template"
+        },
+        {
+          "task": "A module or subworkflow: install, create, update, patch, deprecate, remove, wire into the workflow, `ext.args`, `conf/modules.config`, `environment.yml`, container/Wave URI, GPU module, private module remote, meta map / channel shape",
+          "agent": "nf-core-modules"
+        },
+        {
+          "task": "nf-test, snapshots, \"write/run tests\", a failing pipeline run or crash in `work/`",
+          "agent": "nf-core-testing"
+        },
+        {
+          "task": "Releasing a version, `bump-version`, release checklist, release PR, CHANGELOG for a release",
+          "agent": "nf-core-release"
+        },
+        {
+          "task": "README / `docs/usage.md` / `docs/output.md` / `CITATIONS.md` / CHANGELOG / MultiQC methods text after a pipeline change",
+          "agent": "nf-core-docs"
+        },
+        {
+          "task": "Topic-channel migration, Nextflow strict syntax, institutional/HPC config profile",
+          "agent": "nf-core-migration"
+        }
+      ]
+    }
+  ],
+  "tie_breakers": [
+    "A failing **Nextflow** run goes to `nf-core-testing` (it owns work-directory triage), not `debug-agent`. `debug-agent` keeps everything non-Nextflow.",
+    "Adding a tool to a pipeline is `nf-core-modules` (install *and* wire-in), not `nextflow`.",
+    "Changing a `params.*` and rebuilding the schema is `nf-core-modules`; the schema is never hand-edited by anyone.",
+    "Manuscript prose is `paper-writing`; pipeline documentation is `nf-core-docs`.",
+    "Python: structure/CLI/errors/packaging → `python-dev`; parsing or computing on VCF/BAM/FASTA/GTF content, where correctness of the genomics is the risk → `bioinformatics-agent`. A new `bin/` script that parses VCFs often needs both: `python-dev` for the script skeleton, then `bioinformatics-agent` for the record logic.",
+    "Tests: *what* to test and with which data → `test-design` (plans, use cases, synthetic data, failure cases); nf-test mechanics and snapshots → `nf-core-testing`; SEQC2/GIAB datasets → `refdata` (if installed). Order: `test-design` → (`refdata`) → implementer.",
+    "A new file format, config, schema or storage decision → `data-formats` first, then the implementer.",
+    "If two specialists both fit, run them in sequence in the natural order (design → implement → test → document), not in parallel on the same files.",
+    "If none fits, `nextflow` is the fallback for anything Nextflow-related."
+  ]
+}

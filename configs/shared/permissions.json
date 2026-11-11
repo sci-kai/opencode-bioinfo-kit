@@ -1,0 +1,602 @@
+[
+  {
+    "action": "external_directory",
+    "resource": "*",
+    "effect": "deny"
+  },
+  {
+    "action": "external_directory",
+    "resource": "<user-directories>",
+    "effect": "allow"
+  },
+  {
+    "action": "external_directory",
+    "resource": "{OC_CONFIG}",
+    "effect": "allow"
+  },
+  {
+    "action": "external_directory",
+    "resource": "{OC_CONFIG}/*",
+    "effect": "allow"
+  },
+  {
+    "action": "external_directory",
+    "resource": "{REPO}",
+    "effect": "allow"
+  },
+  {
+    "action": "external_directory",
+    "resource": "{REPO}/*",
+    "effect": "allow"
+  },
+  {
+    "action": "external_directory",
+    "resource": "~/.conda",
+    "effect": "allow"
+  },
+  {
+    "action": "external_directory",
+    "resource": "~/.conda/*",
+    "effect": "allow"
+  },
+  {
+    "action": "external_directory",
+    "resource": "~/.nextflow",
+    "effect": "allow"
+  },
+  {
+    "action": "external_directory",
+    "resource": "~/.nextflow/*",
+    "effect": "allow"
+  },
+  {
+    "action": "external_directory",
+    "resource": "~/.singularity",
+    "effect": "allow"
+  },
+  {
+    "action": "external_directory",
+    "resource": "~/.singularity/*",
+    "effect": "allow"
+  },
+  {
+    "action": "external_directory",
+    "resource": "~/.apptainer",
+    "effect": "allow"
+  },
+  {
+    "action": "external_directory",
+    "resource": "~/.apptainer/*",
+    "effect": "allow"
+  },
+  {
+    "action": "external_directory",
+    "resource": "{OC_DATA}/tool-output/*",
+    "effect": "allow"
+  },
+  {
+    "action": "read",
+    "resource": "{OC_DATA}/auth.json",
+    "effect": "deny"
+  },
+  {
+    "action": "edit",
+    "resource": "{OC_DATA}/auth.json",
+    "effect": "deny"
+  },
+  {
+    "action": "read",
+    "resource": "{OC_CONFIG}/auth*",
+    "effect": "deny"
+  },
+  {
+    "action": "edit",
+    "resource": "{OC_CONFIG}/auth*",
+    "effect": "deny"
+  },
+  {
+    "action": "read",
+    "resource": "{OC_DATA}/opencode.db*",
+    "effect": "deny"
+  },
+  {
+    "action": "edit",
+    "resource": "{OC_DATA}/opencode.db*",
+    "effect": "deny"
+  },
+  {
+    "action": "read",
+    "resource": "*/.env",
+    "effect": "deny"
+  },
+  {
+    "action": "edit",
+    "resource": "*/.env",
+    "effect": "deny"
+  },
+  {
+    "action": "read",
+    "resource": "*/.env.*",
+    "effect": "deny"
+  },
+  {
+    "action": "edit",
+    "resource": "*/.env.*",
+    "effect": "deny"
+  },
+  {
+    "action": "read",
+    "resource": "*/.netrc",
+    "effect": "deny"
+  },
+  {
+    "action": "edit",
+    "resource": "*/.netrc",
+    "effect": "deny"
+  },
+  {
+    "action": "read",
+    "resource": "*/.git-credentials",
+    "effect": "deny"
+  },
+  {
+    "action": "edit",
+    "resource": "*/.git-credentials",
+    "effect": "deny"
+  },
+  {
+    "action": "read",
+    "resource": "*/id_rsa*",
+    "effect": "deny"
+  },
+  {
+    "action": "edit",
+    "resource": "*/id_rsa*",
+    "effect": "deny"
+  },
+  {
+    "action": "read",
+    "resource": "*/id_ed25519*",
+    "effect": "deny"
+  },
+  {
+    "action": "edit",
+    "resource": "*/id_ed25519*",
+    "effect": "deny"
+  },
+  {
+    "action": "read",
+    "resource": "*/.ssh/*",
+    "effect": "deny"
+  },
+  {
+    "action": "edit",
+    "resource": "*/.ssh/*",
+    "effect": "deny"
+  },
+  {
+    "action": "read",
+    "resource": "*/.aws/*",
+    "effect": "deny"
+  },
+  {
+    "action": "edit",
+    "resource": "*/.aws/*",
+    "effect": "deny"
+  },
+  {
+    "action": "read",
+    "resource": "*/.gnupg/*",
+    "effect": "deny"
+  },
+  {
+    "action": "edit",
+    "resource": "*/.gnupg/*",
+    "effect": "deny"
+  },
+  {
+    "action": "edit",
+    "resource": "{OC_CONFIG}",
+    "effect": "deny"
+  },
+  {
+    "action": "edit",
+    "resource": "{OC_CONFIG}/*",
+    "effect": "deny"
+  },
+  {
+    "action": "edit",
+    "resource": "*/.opencode",
+    "effect": "deny"
+  },
+  {
+    "action": "edit",
+    "resource": "*/.opencode/*",
+    "effect": "deny"
+  },
+  {
+    "action": "edit",
+    "resource": "*/opencode.json",
+    "effect": "deny"
+  },
+  {
+    "action": "edit",
+    "resource": "*/opencode.jsonc",
+    "effect": "deny"
+  },
+  {
+    "action": "edit",
+    "resource": ".opencode",
+    "effect": "deny"
+  },
+  {
+    "action": "edit",
+    "resource": ".opencode/*",
+    "effect": "deny"
+  },
+  {
+    "action": "edit",
+    "resource": "opencode.json",
+    "effect": "deny"
+  },
+  {
+    "action": "edit",
+    "resource": "opencode.jsonc",
+    "effect": "deny"
+  },
+  {
+    "action": "edit",
+    "resource": "{REPO}/configs",
+    "effect": "deny"
+  },
+  {
+    "action": "edit",
+    "resource": "{REPO}/configs/*",
+    "effect": "deny"
+  },
+  {
+    "action": "edit",
+    "resource": "{REPO}/codebase",
+    "effect": "deny"
+  },
+  {
+    "action": "edit",
+    "resource": "{REPO}/codebase/*",
+    "effect": "deny"
+  },
+  {
+    "action": "shell",
+    "resource": "rm -r *",
+    "effect": "deny"
+  },
+  {
+    "action": "shell",
+    "resource": "rm -rf *",
+    "effect": "deny"
+  },
+  {
+    "action": "shell",
+    "resource": "rm -fr *",
+    "effect": "deny"
+  },
+  {
+    "action": "shell",
+    "resource": "find * -delete*",
+    "effect": "deny"
+  },
+  {
+    "action": "shell",
+    "resource": "find * -exec rm*",
+    "effect": "deny"
+  },
+  {
+    "action": "shell",
+    "resource": "truncate *",
+    "effect": "deny"
+  },
+  {
+    "action": "shell",
+    "resource": "chown -R *",
+    "effect": "deny"
+  },
+  {
+    "action": "shell",
+    "resource": "git reset --hard *",
+    "effect": "deny"
+  },
+  {
+    "action": "shell",
+    "resource": "git clean -*",
+    "effect": "deny"
+  },
+  {
+    "action": "shell",
+    "resource": "git commit --amend*",
+    "effect": "deny"
+  },
+  {
+    "action": "shell",
+    "resource": "sudo *",
+    "effect": "deny"
+  },
+  {
+    "action": "shell",
+    "resource": "su *",
+    "effect": "deny"
+  },
+  {
+    "action": "shell",
+    "resource": "doas *",
+    "effect": "deny"
+  },
+  {
+    "action": "shell",
+    "resource": "git push *",
+    "effect": "deny"
+  },
+  {
+    "action": "shell",
+    "resource": "git filter-branch *",
+    "effect": "deny"
+  },
+  {
+    "action": "shell",
+    "resource": "git update-ref -d *",
+    "effect": "deny"
+  },
+  {
+    "action": "shell",
+    "resource": "rm -rf /",
+    "effect": "deny"
+  },
+  {
+    "action": "shell",
+    "resource": "rm -rf /*",
+    "effect": "deny"
+  },
+  {
+    "action": "shell",
+    "resource": "rm -fr /*",
+    "effect": "deny"
+  },
+  {
+    "action": "shell",
+    "resource": "rm -r /*",
+    "effect": "deny"
+  },
+  {
+    "action": "shell",
+    "resource": "rm -rf ~*",
+    "effect": "deny"
+  },
+  {
+    "action": "shell",
+    "resource": "rm -fr ~*",
+    "effect": "deny"
+  },
+  {
+    "action": "shell",
+    "resource": "rm -rf $HOME*",
+    "effect": "deny"
+  },
+  {
+    "action": "shell",
+    "resource": "rm -rf .",
+    "effect": "deny"
+  },
+  {
+    "action": "shell",
+    "resource": "rm -rf ./",
+    "effect": "deny"
+  },
+  {
+    "action": "shell",
+    "resource": "rm -rf ..*",
+    "effect": "deny"
+  },
+  {
+    "action": "shell",
+    "resource": "rm -rf *.git*",
+    "effect": "deny"
+  },
+  {
+    "action": "shell",
+    "resource": "mkfs*",
+    "effect": "deny"
+  },
+  {
+    "action": "shell",
+    "resource": "dd if=*",
+    "effect": "deny"
+  },
+  {
+    "action": "shell",
+    "resource": "chmod -R 777*",
+    "effect": "deny"
+  },
+  {
+    "action": "shell",
+    "resource": "chmod 777 *",
+    "effect": "deny"
+  },
+  {
+    "action": "shell",
+    "resource": "shutdown*",
+    "effect": "deny"
+  },
+  {
+    "action": "shell",
+    "resource": "reboot*",
+    "effect": "deny"
+  },
+  {
+    "action": "shell",
+    "resource": "poweroff*",
+    "effect": "deny"
+  },
+  {
+    "action": "shell",
+    "resource": "halt*",
+    "effect": "deny"
+  },
+  {
+    "action": "shell",
+    "resource": "kill -9 -1*",
+    "effect": "deny"
+  },
+  {
+    "action": "shell",
+    "resource": "history -c*",
+    "effect": "deny"
+  },
+  {
+    "action": "shell",
+    "resource": "curl * | sh*",
+    "effect": "deny"
+  },
+  {
+    "action": "shell",
+    "resource": "curl * | bash*",
+    "effect": "deny"
+  },
+  {
+    "action": "shell",
+    "resource": "wget * | sh*",
+    "effect": "deny"
+  },
+  {
+    "action": "shell",
+    "resource": "wget * | bash*",
+    "effect": "deny"
+  },
+  {
+    "action": "shell",
+    "resource": "cat *.bam*",
+    "effect": "deny"
+  },
+  {
+    "action": "shell",
+    "resource": "cat *.cram*",
+    "effect": "deny"
+  },
+  {
+    "action": "shell",
+    "resource": "cat *.sam*",
+    "effect": "deny"
+  },
+  {
+    "action": "shell",
+    "resource": "cat *.vcf*",
+    "effect": "deny"
+  },
+  {
+    "action": "shell",
+    "resource": "cat *.bcf*",
+    "effect": "deny"
+  },
+  {
+    "action": "shell",
+    "resource": "cat *.fastq*",
+    "effect": "deny"
+  },
+  {
+    "action": "shell",
+    "resource": "cat *.fq*",
+    "effect": "deny"
+  },
+  {
+    "action": "shell",
+    "resource": "zcat *.fastq*",
+    "effect": "deny"
+  },
+  {
+    "action": "shell",
+    "resource": "zcat *.fq*",
+    "effect": "deny"
+  },
+  {
+    "action": "shell",
+    "resource": "zcat *.vcf*",
+    "effect": "deny"
+  },
+  {
+    "action": "shell",
+    "resource": "zcat *.bcf*",
+    "effect": "deny"
+  },
+  {
+    "action": "shell",
+    "resource": "head *.bam*",
+    "effect": "deny"
+  },
+  {
+    "action": "shell",
+    "resource": "head *.cram*",
+    "effect": "deny"
+  },
+  {
+    "action": "shell",
+    "resource": "head *.sam*",
+    "effect": "deny"
+  },
+  {
+    "action": "shell",
+    "resource": "head *.vcf*",
+    "effect": "deny"
+  },
+  {
+    "action": "shell",
+    "resource": "head *.fastq*",
+    "effect": "deny"
+  },
+  {
+    "action": "shell",
+    "resource": "head *.fq*",
+    "effect": "deny"
+  },
+  {
+    "action": "shell",
+    "resource": "tail *.vcf*",
+    "effect": "deny"
+  },
+  {
+    "action": "shell",
+    "resource": "tail *.fastq*",
+    "effect": "deny"
+  },
+  {
+    "action": "shell",
+    "resource": "tail *.sam*",
+    "effect": "deny"
+  },
+  {
+    "action": "shell",
+    "resource": "less *.vcf*",
+    "effect": "deny"
+  },
+  {
+    "action": "shell",
+    "resource": "less *.fastq*",
+    "effect": "deny"
+  },
+  {
+    "action": "shell",
+    "resource": "less *.sam*",
+    "effect": "deny"
+  },
+  {
+    "action": "shell",
+    "resource": "more *.vcf*",
+    "effect": "deny"
+  },
+  {
+    "action": "shell",
+    "resource": "more *.fastq*",
+    "effect": "deny"
+  },
+  {
+    "action": "skill",
+    "resource": "*",
+    "effect": "allow"
+  }
+]

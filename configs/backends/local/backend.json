@@ -1,0 +1,65 @@
+{
+  "name": "LM Studio (local)",
+  "model": "main",
+  "models_example": "lmstudio-models.example.json",
+  "providers": {
+    "lmstudio": {
+      "name": "LM Studio (local)",
+      "package": "@opencode/ai/providers/openai-compatible",
+      "settings": {
+        "baseURL": "{LMSTUDIO_URL}",
+        "timeout": 1800000,
+        "chunkTimeout": 600000
+      },
+      "models": {}
+    }
+  },
+  "tiers": {
+    "light": {
+      "temperature": 0.6,
+      "top_p": 0.95
+    },
+    "main": {
+      "temperature": 0.6,
+      "top_p": 0.95
+    },
+    "codegen": {
+      "temperature": 0.6,
+      "top_p": 0.95
+    },
+    "careful": {
+      "temperature": 0.6,
+      "top_p": 0.95
+    },
+    "writing": {
+      "temperature": 0.6,
+      "top_p": 0.95
+    }
+  },
+  "tier_roles": {
+    "light": "fast",
+    "main": "fast",
+    "writing": "fast",
+    "codegen": "heavy",
+    "careful": "heavy"
+  },
+  "tier_help": {
+    "light": "small helpers: titles, summaries, file search, conda and lint runs",
+    "main": "the orchestrator (build) and general tasks; runs most often",
+    "writing": "documentation",
+    "codegen": "code generation: Nextflow, nf-core modules and tests, Python",
+    "careful": "planning, debugging, reviews, bioinformatics and test design"
+  },
+  "agent_tiers": {
+    "nextflow-lint": "light",
+    "nf-core-release": "light"
+  },
+  "tier_description_suffix": {
+    "codegen": "Runs on a slower local model: delegate one file or one coherent change at a time.",
+    "careful": "Runs on a slower local model: delegate one file or one coherent change at a time."
+  },
+  "compaction": {
+    "auto": true,
+    "buffer": 16000
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "description": "Agent packages selectable with opencode-kit --agents. 'core' is always installed. 'skills' = skill groups installed by default with the package (when no --skills is given and there is no previous selection).",
+  "packages": {
+    "core": {
+      "description": "orchestrator (build/general), plan, built-ins, conda-agent, debug-agent",
+      "required": true,
+      "skills": []
+    },
+    "nf-core": {
+      "description": "Nextflow/nf-core development: nextflow, nextflow-lint, nf-core-template/-modules/-testing/-release/-docs/-migration",
+      "required": false,
+      "skills": [
+        "nf-core"
+      ]
+    },
+    "dev": {
+      "description": "software engineering: python-dev, data-formats, test-design",
+      "required": false,
+      "skills": [
+        "cubi-dev"
+      ]
+    },
+    "bioinformatics": {
+      "description": "bioinformatics-agent, paper-writing",
+      "required": false,
+      "skills": [
+        "cubi-dev"
+      ]
+    },
+    "refdata": {
+      "description": "reference data and benchmarking: refdata agent (SEQC2/GIAB test data with the external seqc2-toolkit, truth-set benchmarking, offline transfer)",
+      "required": false,
+      "skills": [
+        "refdata"
+      ]
+    }
+  }
+}

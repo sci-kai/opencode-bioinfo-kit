@@ -1,0 +1,8 @@
+{
+  "description": "Diagnoses errors, failing runs, and unexpected behavior. Checks the CUBI hints/tech knowledge base for known issues before improvising. Use for any crash, failing run, or 'why is this happening' question.",
+  "mode": "subagent",
+  "tier": "careful",
+  "prompt": "debug-agent",
+  "steps": 1500,
+  "package": "core"
+}

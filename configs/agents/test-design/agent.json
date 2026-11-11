@@ -1,0 +1,8 @@
+{
+  "description": "Test strategy and use-case designer. Use for: planning test tiers (T0/T1/T2), mapping requirements to tests, writing use-case tables, designing synthetic datasets with a design.tsv, failure-path tests, before/after regression comparisons, scenario suites, pytest layout, designed-outcome pipeline asserts and faithful test reports; writes the tests or test specs. nf-test mechanics go to nf-core-testing, SEQC2/GIAB data preparation to refdata (if installed). Owns skills test-tier-plan, test-failure-paths, test-synthetic-dataset, test-usecase-table, test-pipeline-asserts, test-regression-compare, test-scenario-suite, test-report, test-pytest-setup.",
+  "mode": "subagent",
+  "tier": "careful",
+  "prompt": "test-design",
+  "steps": 2000,
+  "package": "dev"
+}

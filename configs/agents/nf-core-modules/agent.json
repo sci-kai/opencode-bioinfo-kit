@@ -1,0 +1,8 @@
+{
+  "description": "nf-core module and subworkflow lifecycle specialist. Use for: installing, creating, updating, patching, deprecating or removing a module/subworkflow, wiring an installed module into the workflow (include, conf/modules.config, ext.args, publishDir, MultiQC), environment.yml and Seqera/Wave container URIs, GPU modules, custom or private module remotes, and meta-map/channel-shape design. Owns skills nf-core-module-install/-create/-wire-in/-update/-deprecate, nf-core-container-uri, nf-core-gpu-module, nf-core-custom-remote, nf-core-meta-map, nf-core-ext-args.",
+  "mode": "subagent",
+  "tier": "codegen",
+  "prompt": "nf-core-modules",
+  "steps": 2000,
+  "package": "nf-core"
+}

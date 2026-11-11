@@ -1,0 +1,8 @@
+{
+  "description": "Bioinformatics file-format code that must be correct: VCF/BAM/FASTA/GTF parsing, variant representation and normalisation, variant calling, omics statistics, R analysis scripts. Use when correctness of the genomics matters more than speed. Python script structure, CLI and packaging go to python-dev; table/format design to data-formats.",
+  "mode": "subagent",
+  "tier": "careful",
+  "prompt": "bioinformatics-agent",
+  "steps": 2000,
+  "package": "bioinformatics"
+}

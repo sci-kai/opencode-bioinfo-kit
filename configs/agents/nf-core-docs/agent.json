@@ -1,0 +1,8 @@
+{
+  "description": "nf-core pipeline documentation specialist. Use for: updating README.md, docs/usage.md, docs/output.md, docs/README.md, CITATIONS.md, CHANGELOG.md, and the automated MultiQC methods-description text after a pipeline change. Not for manuscript prose — that is paper-writing. Owns skill nf-core-pipeline-docs.",
+  "mode": "subagent",
+  "tier": "writing",
+  "prompt": "nf-core-docs",
+  "steps": 2000,
+  "package": "nf-core"
+}

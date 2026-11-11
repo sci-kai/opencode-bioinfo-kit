@@ -1,0 +1,8 @@
+{
+  "description": "Nextflow/nf-core fallback agent — owns workflow and subworkflow logic, channel plumbing, nextflow.config/conf/*.config, and pipeline architecture, always to nf-core standard (strict syntax, meta maps, nf-schema, ext.args). Use for any Nextflow task that no nf-core-* specialist owns; module/subworkflow lifecycle goes to nf-core-modules and nf-test to nf-core-testing.",
+  "mode": "subagent",
+  "tier": "codegen",
+  "prompt": "nextflow",
+  "steps": 2000,
+  "package": "nf-core"
+}

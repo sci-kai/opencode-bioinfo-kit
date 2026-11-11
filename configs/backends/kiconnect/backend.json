@@ -1,0 +1,140 @@
+{
+  "name": "KI Connect NRW",
+  "model": "main",
+  "providers": {
+    "ki_connect": {
+      "name": "KI Connect NRW",
+      "package": "@opencode/ai/providers/openai-compatible",
+      "settings": {
+        "baseURL": "https://chat.kiconnect.nrw/api/v1",
+        "timeout": 900000,
+        "chunkTimeout": 900000
+      },
+      "models": {
+        "GPT OSS 120B KI.Inferenz.nrw": {
+          "name": "OpenAI GPT OSS 120B",
+          "capabilities": {
+            "tools": true,
+            "temperature": false,
+            "reasoning": {
+              "supported": true
+            }
+          },
+          "limit": {
+            "context": 131072,
+            "output": 8192
+          }
+        },
+        "MistralSmall_4": {
+          "name": "Mistral Small 4 119B-2603",
+          "capabilities": {
+            "tools": true,
+            "temperature": true,
+            "reasoning": {
+              "supported": true
+            }
+          },
+          "limit": {
+            "context": 262144,
+            "output": 65536
+          },
+          "settings": {
+            "timeout": 900000,
+            "chunkTimeout": 900000,
+            "maxRetries": 3,
+            "retryDelay": 1000
+          }
+        },
+        "GPT5-GWDG": {
+          "name": "OpenAI GPT 5 high effort (restricted: 500K tokens or 200 msgs/week)",
+          "capabilities": {
+            "tools": true,
+            "temperature": false,
+            "reasoning": {
+              "supported": true
+            }
+          },
+          "limit": {
+            "context": 400000,
+            "output": 128000
+          },
+          "settings": {
+            "timeout": 900000,
+            "maxRetries": 3,
+            "retryDelay": 1000
+          }
+        },
+        "GPT5_4": {
+          "name": "OpenAI GPT 5.4 high effort (restricted: 500K tokens or 200 msgs/week)",
+          "capabilities": {
+            "tools": true,
+            "temperature": false,
+            "reasoning": {
+              "supported": true
+            }
+          },
+          "limit": {
+            "context": 128000,
+            "output": 16384
+          },
+          "settings": {
+            "timeout": 900000,
+            "maxRetries": 3,
+            "retryDelay": 1000
+          }
+        },
+        "qwen-3.8-27B": {
+          "name": "Qwen3.8 27B (KI.Inferenz.nrw, dense, reasoning, slow)",
+          "capabilities": {
+            "tools": true,
+            "temperature": true,
+            "reasoning": {
+              "supported": true
+            }
+          },
+          "limit": {
+            "context": 262144,
+            "output": 65536
+          },
+          "settings": {
+            "timeout": 900000,
+            "chunkTimeout": 900000,
+            "maxRetries": 3,
+            "retryDelay": 1000
+          }
+        }
+      }
+    }
+  },
+  "tiers": {
+    "light": {
+      "model": "ki_connect/GPT OSS 120B KI.Inferenz.nrw"
+    },
+    "writing": {
+      "model": "ki_connect/MistralSmall_4",
+      "temperature": 0.3,
+      "top_p": 0.9
+    },
+    "main": {
+      "model": "ki_connect/qwen-3.8-27B",
+      "temperature": 0.6,
+      "top_p": 0.95
+    },
+    "codegen": {
+      "model": "ki_connect/qwen-3.8-27B",
+      "temperature": 0.6,
+      "top_p": 0.95
+    },
+    "careful": {
+      "model": "ki_connect/qwen-3.8-27B",
+      "temperature": 0.6,
+      "top_p": 0.95
+    }
+  },
+  "agent_tiers": {},
+  "tier_description_suffix": {},
+  "compaction": {
+    "auto": true,
+    "buffer": 15000
+  }
+}

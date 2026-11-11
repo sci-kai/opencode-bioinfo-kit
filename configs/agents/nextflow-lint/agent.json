@@ -1,0 +1,8 @@
+{
+  "description": "Independent lint gate after every pipeline change: runs nextflow inspect (compile check), nextflow lint, nf-core pipelines lint, nf-core modules/subworkflows lint and schema lint, black/ruff/pytest for bin/ scripts, fixes every failure and warning (vendored modules only via update/patch), and re-runs until clean. Use after any Nextflow/nf-core change, or whenever asked to lint or validate a pipeline.",
+  "mode": "subagent",
+  "tier": "careful",
+  "prompt": "nextflow-lint",
+  "steps": 1500,
+  "package": "nf-core"
+}

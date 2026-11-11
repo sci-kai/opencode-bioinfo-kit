@@ -1,0 +1,8 @@
+{
+  "description": "Cross-cutting Nextflow/nf-core migration specialist. Use for: migrating version reporting from versions.yml to topic channels, migrating configs to Nextflow strict syntax (default from 26.04), and writing or fixing institutional/HPC config profiles. Handles sweeping mechanical changes that must be completed fully, never half-applied. Owns skills nf-core-migrate-topic-channels, nf-core-migrate-strict-syntax, nf-core-institutional-profile.",
+  "mode": "subagent",
+  "tier": "codegen",
+  "prompt": "nf-core-migration",
+  "steps": 2000,
+  "package": "nf-core"
+}

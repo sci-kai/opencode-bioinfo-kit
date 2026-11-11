@@ -1,0 +1,6 @@
+# Outputs of codebase/opencode-kit.py preview-configs (review copies; deploy writes
+# to ~/.config/opencode instead)
+/generated/
+
+# Python bytecode from running scripts/
+__pycache__/

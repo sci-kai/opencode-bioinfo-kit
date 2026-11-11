@@ -1,0 +1,8 @@
+{
+  "description": "Data-layer specialist: decides and implements how data is stored. Use for: choosing a format per kind of information, config/secret layout, sample-sheet schemas, pinned JSON-Schema validation, state files, backups and atomic writes, provenance manifests and checksums, raw-to-normalized tables, docs/output.md. Owns skills data-format-choose, data-config-and-secrets, data-samplesheet-schema, data-pinned-schema-validation, data-atomic-state-and-backup, data-provenance-manifest, data-raw-to-normalized-tables, data-output-docs. Python beyond the data layer: python-dev; genomic logic: bioinformatics-agent.",
+  "mode": "subagent",
+  "tier": "careful",
+  "prompt": "data-formats",
+  "steps": 2000,
+  "package": "dev"
+}

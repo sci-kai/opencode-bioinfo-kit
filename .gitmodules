@@ -1,0 +1,6 @@
+[submodule "cubi-rules/knowledge-base.wiki"]
+	path = cubi-rules/knowledge-base.wiki
+	url = https://github.com/core-unit-bioinformatics/knowledge-base.wiki.git
+[submodule "skills/bionemo-agent-toolkit"]
+	path = skills/bionemo-agent-toolkit
+	url = https://github.com/NVIDIA-BioNeMo/bionemo-agent-toolkit.git

@@ -1,0 +1,8 @@
+{
+  "description": "nf-core TEMPLATE branch and template-sync specialist. Use for: running or triggering a template sync, merging an automated 'Template update for nf-core/tools vX' PR, repairing a broken/polluted TEMPLATE branch, setting up template syncing retrospectively on a pipeline that lacks it, scaffolding a brand-new pipeline from the template, and renaming a default branch from master to main. Owns skills nf-core-template-sync-run/-merge/-repair/-bootstrap, nf-core-pipeline-create, nf-core-branch-master-to-main.",
+  "mode": "subagent",
+  "tier": "codegen",
+  "prompt": "nf-core-template",
+  "steps": 2000,
+  "package": "nf-core"
+}

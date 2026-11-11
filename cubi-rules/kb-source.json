@@ -1,0 +1,8 @@
+{
+  "knowledge_base": "https://github.com/core-unit-bioinformatics/knowledge-base/wiki",
+  "submodule": "cubi-rules/knowledge-base.wiki",
+  "digest": "cubi-rules/cubi-rules-condensed.md",
+  "derived_from_commit": "f5c2e2ee7c2c48222b4bb7f17dcedd91264bf110",
+  "kb_commit_date": "2026-09-05",
+  "derived_on": "2026-11-09"
+}

@@ -1,0 +1,8 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "instructions": [
+    "{REPO}/configs/instructions/general-work-rules.md",
+    "{REPO}/configs/instructions/coding-and-data-standards.md",
+    "{REPO}/cubi-rules/cubi-rules-condensed.md"
+  ]
+}
